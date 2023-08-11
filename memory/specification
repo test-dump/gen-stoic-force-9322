@@ -1,0 +1,28 @@
+Program Specification:
+This program will be a simple "Book Review System" built using Python with a RESTful API for serving data. The Book Review System allows users to register, authenticate, view a list of books, add book reviews, and see other users' reviews. This Book Review System aims to provide reliable reviews and suggestions for an avid reader in search of new books. The data is maintained in a SQLite database using SQLAlchemy as the Object Relational Mapper and Marshmallow for object serialization/deserialization.
+
+Features:
+1. User registration and authentication: Users can register to the site providing a username and password. Passwords will be hashed before being stored in the database for security purposes. Users can also log in using their credentials.
+
+2. Book listings: A list of books, along with pertinent information like their authors, publication year, and a brief summary can be fetched from the API.
+
+3. Reviews: Users can add reviews to books. Reviews consist of a rating (1-5 stars) and a text comment. Users can see all of their own reviews, and also see book reviews by other users.
+
+4. Search: Users can search for books based on keywords in the book's title or author's name.
+
+The core components of the system include the following classes, functions, or methods:
+
+1. `User`: A class representing a user. It will contain methods to authenticate and register a user.
+2. `encrypt_password()`: This function will take in a password and return a hashed version for secure storage.
+3. `Book`: A class representing a book. It will contain methods to retrieve all books and search for a book by keyword.
+4. `Review`: A class representing a review. It will contain methods to add, delete and retrieve reviews of a book.
+5. `UserController`, `BookController`, `ReviewController` : These classes are used to handle incoming HTTP requests related to Users, Books, and Reviews respectively.
+
+Non-standard Python packages to be used include:
+
+1. Flask is used to create the web server and define the routes for our API.
+2. SQLAlchemy is used as the ORM to interact with the SQLite database.
+3. Flask-Marshmallow is used for object serialization/deserialization.
+4. Werkzeug is used for generating password hashes.
+5. flask_jwt_extended is used for handling JWTs, which will be used to manage user sessions after login.
+6. Pytest for testing our application.
