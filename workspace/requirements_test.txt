@@ -1,0 +1,7 @@
+pytest
+Flask
+SQLAlchemy
+Flask-SQLAlchemy
+Werkzeug
+flask-marshmallow
+flask_jwt_extended
